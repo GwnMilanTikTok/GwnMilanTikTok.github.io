@@ -1,0 +1,1033 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar .nav-links li a:hover {
+    color: #b6b5b0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .nav-links.active {
+        display: block;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: #fff;
+    }
+}
+
+/* Hero Section (only visible on homepage) */
+.home .hero {
+    background: #333 url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.home .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.home .hero p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease-out 0.2s;
+}
+
+.home .hero .btn {
+    background: #f1c40f;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.home .hero .btn:hover {
+    background: #e67e22;
+}
+
+/* Section styles (like "about us", "contact" etc.) */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Section */
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #f1c40f;
+}
+
+/* FadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 20px;
+    }
+
+    .services-list {
+        flex-direction: column;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo a {
+        font-size: 1.5rem;
+    }
+
+    .home .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .home .hero p {
+        font-size: 1rem;
+    }
+
+    .home .hero .btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-card .author {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+.review-card .rating {
+    font-size: 1.2rem;
+    color: #f1c40f;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .review-card {
+        padding: 20px;
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #f1c40f;
+    color: #333;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+}
+
+/* Populaire video's sectie */
+.populaire-videos {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .populaire-videos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  
+  .video-container {
+    display: flex;
+    justify-content: space-between; /* Zorgt voor gelijke ruimte tussen de video's */
+    gap: 20px; /* Afstand tussen de video's */
+    flex-wrap: nowrap; /* Voorkomt dat de video's naar de volgende regel gaan */
+    overflow: hidden; /* Verbergt alles buiten de container */
+    max-width: 100%; /* Zorg ervoor dat de container zich aanpast aan de schermbreedte */
+    box-sizing: border-box;
+  }
+  
+  .video-card {
+    flex: 1 1 30%; /* Zorg ervoor dat de video's in een rij staan en een gelijkmatige breedte hebben */
+    max-width: 32%; /* Zorg ervoor dat de video's niet te breed worden */
+    height: 0;
+    padding-bottom: 56.25%; /* Dit zorgt voor een 16:9 verhouding (vergelijkbaar met het formaat van de meeste video's) */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    max-height: 500px; /* Beperk de hoogte van de video zodat deze niet te groot wordt */
+  }
+  
+  .video-card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 1024px) {
+    .video-card {
+      flex: 1 1 45%; /* Op grotere schermen zoals tablets, twee video's naast elkaar */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .video-card {
+      flex: 1 1 100%; /* Op kleinere schermen (mobiel) worden de video's onder elkaar gezet */
+    }
+  }
+  
+/* Algemene styling voor de header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%; /* Zorg ervoor dat de header 100% breed is */
+    box-sizing: border-box; /* Zorgt ervoor dat padding geen invloed heeft op de breedte */
+  }
+  
+  /* Styling voor de navbar (flexbox om alles netjes uit te lijnen) */
+  .navbar {
+    display: flex;
+    justify-content: flex-start; /* Zorgt ervoor dat alles naar de linkerzijde wordt uitgelijnd */
+    align-items: center;
+    width: 100%; /* Zorg ervoor dat de navbar de volledige breedte van de pagina heeft */
+    margin: 0; /* Verwijder ongewenste marges */
+  }
+  
+  /* Container voor het logo en de titel */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Zorgt voor wat ruimte links van het logo */
+  }
+  
+  /* Klein logo */
+  .logo {
+    width: 50px; /* Klein logo */
+    height: auto;
+  }
+  
+  /* Styling voor de tekst naast het logo */
+  .site-title {
+    color: white;
+    margin-left: 10px; /* Ruimte tussen logo en tekst */
+    font-size: 24px; /* Pas de grootte van de titel aan */
+    font-weight: bold;
+    text-transform: uppercase; /* Optioneel: maak de tekst hoofdletters */
+  }
+  
+  /* Styling voor de navigatielinks */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Zorgt ervoor dat de navigatie naar rechts verschuift */
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Hover-effect voor links */
+  .nav-links a:hover {
+    color: #f1f1f1;
+  }
+  
+
+
+
+
+
+/* Stijl voor de Features Sectie zonder kader en zonder kleurverschil */
+#features {
+    padding: 30px; /* Ruimte binnen de sectie */
+    margin: 40px 0; /* Ruimte boven en onder de sectie */
+    background-color: transparent; /* Zorgt ervoor dat de achtergrondkleur hetzelfde blijft als de pagina */
+  }
+  
+  /* Stijl voor de sectie titel */
+  #features .section-title {
+    font-size: 28px; /* Grotere tekst voor de titel */
+    font-weight: bold; /* Bold voor de titel */
+    text-align: center; /* Centraal uitgelijnd */
+    margin-bottom: 20px; /* Ruimte onder de titel */
+    color: #ffffff; /* Donkere kleur voor de tekst */
+  }
+  
+  /* Stijl voor de individuele feature kaarten */
+  #features .features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  #features .feature-card {
+    background-color: #fff; /* Witte achtergrond voor de kaarten */
+    border: 2px solid #ddd; /* Lichte rand rondom elke kaart */
+    padding: 20px;
+    width: 30%; /* Zorgt ervoor dat de kaarten niet te breed worden */
+    text-align: center; /* Tekst gecentreerd in de kaart */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #3484a5; /* Zachte schaduw voor de kaarten */
+    transition: transform 0.3s ease; /* Gladde overgang bij hover */
+  }
+  
+  /* Hover effect voor de feature kaarten */
+  #features .feature-card:hover {
+    transform: translateY(-10px); /* Kaarten 'bewegen' omhoog bij hover */
+    box-shadow: 0px 8px 16px #45adda; /* Diepere schaduw bij hover */
+  }
+  
+  /* Stijl voor de iconen in de kaarten */
+  #features .feature-card i {
+    font-size: 40px; /* Grotere iconen */
+    color: #3484a5; /* Groene kleur voor de iconen */
+    margin-bottom: 15px; /* Ruimte onder de iconen */
+  }
+  
+  /* Stijl voor de titels en tekst in de kaarten */
+  #features .feature-card h3 {
+    font-size: 20px; /* Vergroot de titel in de kaarten */
+    margin-bottom: 10px; /* Ruimte onder de titel */
+    color: #333; /* Donkere kleur voor de titel */
+  }
+  
+  #features .feature-card p {
+    font-size: 16px; /* Standaard tekstgrootte */
+    color: #666; /* Lichtere kleur voor de tekst */
+  }
+  
+
+  /* Styling voor de Hero sectie bovenaan de pagina */
+.hero {
+    background: url('website3.png') no-repeat center center/cover; /* Aangepaste achtergrondafbeelding */
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px; /* Vergroot de tekst */
+    font-family: 'Arial', sans-serif; /* Kies een mooie font */
+    font-weight: bold; /* Maak de tekst vetter */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Voeg een schaduw toe voor extra diepte */
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Schaduw voor de tekst */
+  }
+
+  /* Hero sectie met parallax effect */
+.hero {
+    background: url('website3.png') no-repeat center center/cover; /* Achtergrondafbeelding */
+    height: 100vh; /* Zet de hoogte van de hero sectie gelijk aan het scherm */
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed; /* Parallax effect */
+  }
+  
+  /* Styling voor de tekst binnen de hero sectie */
+  .hero-content h1 {
+    font-size: 60px; /* Grotere tekst voor de titel */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
+  }
+  
+  .hero-content p {
+    font-size: 22px;
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Schaduw voor tekst */
+  }
+  
+  /* Button stijl */
+  .hero .btn {
+    padding: 10px 30px;
+    background-color: #3484a5; /* Mooie oranje kleur voor de knop */
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff4500; /* Iets donkerder oranje voor hover effect */
+  }
+  
+  
+
+
+
+
+  /* Inlogknop */
+.nav-links .login-btn {
+    background-color: #3484a5; /* Gele achtergrondkleur */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links .login-btn:hover {
+    background-color: #3484a5; /* Donkerder geel bij hover */
+}
+
+
+/* Algemene stijl voor de loginpagina */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7fc;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #3484a5;
+    outline: none;
+}
+
+.login-btn {
+    background-color: #3484a5;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #3484a5;
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #3484a5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* uitlog knop onschikbaar maken */
+
+.logout-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #logout-menu li a {
+    padding: 10px;
+    background-color: #f8f8f8;
+    text-decoration: none;
+    display: block;
+  }
+  
+  #logout-menu li a:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+
+/* Algemene stijl voor de registratiepagina */
+body {
+    background-image: url('website3.png'); /* Voeg hier je eigen achtergrondafbeelding toe */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(244, 247, 252, 0); /* Semi-transparante achtergrond voor de sectie */
+}
+
+.register-container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #3484a5;
+    outline: none;
+}
+
+.register-btn {
+    background-color: #3484a5;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #2575fc;
+}
+
+.login-link {
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #3484a5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Algemene stijl voor de succespagina */
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7fc;
+}
+
+.register-container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.register-btn {
+    background-color: #3484a5;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #3484a5;
+}
+
+
+
+
+
+
+/* Maak de nav-links flex en zorg ervoor dat ze naar rechts uitgelijnd worden */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Zorgt ervoor dat de links naar rechts worden uitgelijnd */
+  }
+  
+  /* Welkomstknop als cirkel */
+  #welcome-btn a.welcome-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;  /* Cirkelvormig */
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #welcome-btn a.welcome-btn:hover {
+    background-color: #0056b3; /* Donkerder blauw bij hover */
+  }
+  
+  /* Standaard dropdown-menu is verborgen */
+  #welcome-btn .dropdown-menu {
+    display: none;  /* Dropdown is standaard verborgen */
+    position: absolute;
+    top: 100%;  /* Plaatst het dropdown-menu onder de welkomstknop */
+    right: 0;  /* Uitlijnen naar de rechterkant van de knop */
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0;
+    min-width: 150px;
+    border-radius: 5px;
+    list-style: none;
+  }
+  
+  /* Dropdown items stijl */
+  #welcome-btn .dropdown-menu li a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  #welcome-btn .dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Zorg ervoor dat het menu blijft verschijnen zodra je over de knop beweegt */
+  #welcome-btn:hover .dropdown-menu {
+    display: block;  /* Dropdown zichtbaar bij hover op de container */
+  }
+  
+  /* Zorg ervoor dat het menu zichtbaar blijft als je over het menu zelf beweegt */
+  #welcome-btn:hover .dropdown-menu:hover {
+    display: block; /* Het menu blijft zichtbaar wanneer je over het menu beweegt */
+  }
+  
+  /* Voeg een padding toe om de ruimte rond de knop en het dropdown-menu goed te regelen */
+  #welcome-btn {
+    position: relative;  /* Zorgt ervoor dat het dropdown-menu binnen de juiste container gepositioneerd wordt */
+    margin-right: 20px;  /* Voeg wat marge toe aan de rechterkant voor ruimte */
+  }
+  
+  /* Zorg ervoor dat de dropdown niet naar links verschuift */
+  #welcome-btn .dropdown-menu {
+    left: auto; /* Zorg ervoor dat het menu niet naar links verschuift */
+    right: 0; /* Zorgt ervoor dat de dropdown rechts uitgelijnd is */
+  }
+  
+  /* Zorg ervoor dat de nav-bar altijd goed gepositioneerd is */
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Zorgen dat alles rechts wordt uitgelijnd */
+    width: 100%;
+  }
+  
+  /* Zorg ervoor dat je de andere elementen naar rechts uitlijnt */
+  .navbar .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* De logo wordt aan de linkerzijde gehouden */
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    justify-content: flex-end; /* De nav-links worden aan de rechterkant uitgelijnd */
+    margin-left: auto; /* Duwt de links naar de rechterkant */
+  }
+  
+  
+  
+  
